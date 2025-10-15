@@ -138,6 +138,7 @@ json{
   "database": "connected",
   "record_count": 948
 }
+
 3. Get Measurements
 httpGET /api/measurements
 Query Parameters:
@@ -168,6 +169,7 @@ json{
     }
   ]
 }
+
 4. Get Statistics
 httpGET /api/statistics
 Query Parameters:
@@ -193,6 +195,7 @@ json{
     }
   }
 }
+
 5. Detect Outliers
 httpGET /api/outliers
 Query Parameters:
@@ -202,12 +205,15 @@ parameter - Specific parameter to check (optional)
 
 Example:
 'curl "http://localhost:5000/api/outliers?threshold=2.5&parameter=pH"'
+
 6. Get Locations
 httpGET /api/locations
 Returns list of all unique monitoring locations.
+
 7. Get Date Range
 httpGET /api/date_range
 Returns minimum and maximum dates in the dataset.
+
 8. Geographic Filtering (Extra Credit)
 httpGET /api/measurements/geographic
 Two filtering modes:
@@ -228,6 +234,7 @@ max_lon - Maximum longitude
 
 Example:
 'curl "http://localhost:5000/api/measurements/geographic?min_lat=40.7&max_lat=40.8&min_lon=-74.0&max_lon=-73.9"'
+
 9. Time-Series Resampling (Extra Credit)
 httpGET /api/timeseries/resample
 Query Parameters:
@@ -247,6 +254,7 @@ curl "http://localhost:5000/api/timeseries/resample?frequency=W&aggregation=mean
 10. Get Geographic Bounds
 httpGET /api/geographic/bounds
 Returns the geographic boundaries of all data points.
+
 Dashboard Features
 Tab 1: Overview
 
@@ -299,6 +307,7 @@ Switch to Real MongoDB
 To use a real MongoDB instance instead of mongomock:
 In data_cleaner.py and api/app.py:
 pythonUSE_MOCK = False  # Change from True to False
+
 Requirements:
 
 MongoDB running on mongodb://localhost:27017/
@@ -310,12 +319,14 @@ pythondf_clean, df_outliers = etl.remove_outliers_zscore(
     numeric_columns, 
     threshold=2.5  # Change from 3 to be more strict
 )
+
 Generate More Data
 In data_cleaner.py:
 pythongenerate_sample_data(
     filepath='data/raw_water_quality.csv', 
     n_samples=5000  # Change from 1000
 )
+
 Change API Port
 In api/app.py:
 pythonapp.run(debug=True, port=8080)  # Change from 5000
@@ -419,15 +430,14 @@ Aggregation methods (mean, median) handle missing values
 Rolling averages smooth noise and highlight patterns
 
 Extra Credit Features
-This project implements two extra credit features worth +4 points:
-1. Geographic Filters (+2 pts)
+1. Geographic Filters
 
 Radius-based filtering with distance calculations
 Bounding box filtering for rectangular areas
 Interactive map visualizations
 Location-based statistics
 
-2. Time-Series Resampling (+2 pts)
+2. Time-Series Resampling
 
 Multiple frequency options (H, D, W, M)
 Multiple aggregation methods
