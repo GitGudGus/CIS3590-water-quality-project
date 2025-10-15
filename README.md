@@ -469,6 +469,7 @@ Requests - HTTP client for API communication
 
 License
 MIT License - Free to use for educational purposes
+
 Authors
 [Gustavo Pineda, Luis Delgado, Anders Gutierrez, Jonathan Serrano]
 [CIS3590 Internship Ready Software Development]
