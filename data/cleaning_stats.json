@@ -1,0 +1,38 @@
+{
+  "original_count": 1000,
+  "cleaned_count": 945,
+  "outliers_count": 55,
+  "removal_percentage": 5.5,
+  "column_stats": {
+    "pH": {
+      "original_mean": 7.241579917762958,
+      "original_std": 1.0188352479757201,
+      "cleaned_mean": 7.2365608429112696,
+      "cleaned_std": 0.5053728397219284
+    },
+    "temperature": {
+      "original_mean": 22.365361977753977,
+      "original_std": 4.358239750271723,
+      "cleaned_mean": 22.067744194870297,
+      "cleaned_std": 2.902114126762763
+    },
+    "turbidity": {
+      "original_mean": 5.476618981979486,
+      "original_std": 14.818696227761158,
+      "cleaned_mean": 4.042089149508993,
+      "cleaned_std": 2.8631324674337932
+    },
+    "dissolved_oxygen": {
+      "original_mean": 7.982145817252989,
+      "original_std": 0.9811038798340018,
+      "cleaned_mean": 7.979966456929793,
+      "cleaned_std": 0.9630743195746383
+    },
+    "conductivity": {
+      "original_mean": 496.79431761320774,
+      "original_std": 101.79809023808055,
+      "cleaned_mean": 496.95068257024155,
+      "cleaned_std": 101.9936199198885
+    }
+  }
+}
